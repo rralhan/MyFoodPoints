@@ -1,6 +1,7 @@
 # myfoodpoints
 
-A new Flutter project.
+My Calorie Counter
+
 
 ## Getting Started
 
