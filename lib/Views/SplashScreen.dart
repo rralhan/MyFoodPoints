@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             verticalDirection: VerticalDirection.down,
             children: [
-              //Image.asset("images/PixShareIcon.png"),
+              Image.asset("images/KB.png"),
               Padding(
                 padding: EdgeInsets.all(50.0),
               ),
