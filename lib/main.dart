@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Views/SplashScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,15 +19,30 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+              backgroundColor: Colors.orange.shade500,
+              foregroundColor: Colors.white)
       ),
-      home: MyHomePage(title: 'My Food Points Home Page'),
+      //home: MyHomePage(title: 'My Food Points'),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => SplashScreen(),
+        /* '/login': (BuildContext context) => LoginScreen(),
+        '/homeScreen': (BuildContext context) => HomeScreen(),
+        '/myAlbums': (BuildContext context) => MyAlbums(),
+        '/collaborations': (BuildContext context) => Collaborations(),
+        '/registerUser': (BuildContext context) => RegisterUser(),
+        '/loginUser': (BuildContext context) => LoginUser(),
+        '/settings': (BuildContext context) => SettingsPage(),
+        '/profile' : (BuildContext context) => ProfilePage(), */
+      }
 
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+/* class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -106,7 +122,8 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
+        //backgroundColor: Colors.orange,
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-}
+} */
