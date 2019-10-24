@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "184235638231",
+    "firebase_url": "https://myfoodpoints-d852d.firebaseio.com",
+    "project_id": "myfoodpoints-d852d",
+    "storage_bucket": "myfoodpoints-d852d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184235638231:android:200bdc3ad42eccbed69f92",
+        "android_client_info": {
+          "package_name": "com.techzone.myfoodpoints"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184235638231-ji9uq3oi6p8sq59akh5gfkps7boggvqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techzone.myfoodpoints",
+            "certificate_hash": "81606e4a44ebd6e4ff6b59aebdaf0bc538072603"
+          }
+        },
+        {
+          "client_id": "184235638231-pgu23jmrn0dhkp96j5r3lea68c7dseha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHVY964_t0uQGu2qew6rvGLW7ssZ6l4l0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184235638231-pgu23jmrn0dhkp96j5r3lea68c7dseha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
