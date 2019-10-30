@@ -3,6 +3,7 @@ import 'package:myfoodpoints/Business/MyAuthentication.dart';
 import 'package:myfoodpoints/DataAccess/FireStore/UsersDAL.dart';
 import 'package:myfoodpoints/Helpers/FormUtility.dart';
 import 'package:myfoodpoints/Models/User.dart';
+import 'package:myfoodpoints/Models/UserProfile.dart';
 import 'package:myfoodpoints/Models/ViewModels/UserRegistrationVM.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -249,13 +250,18 @@ class _RegisterWithEmailScreenState extends State<RegisterWithEmailScreen> with 
         if (dbUser == null) {
           dbUser = new User();
           dbUser.token = authId.token;
-          dbUser.displayText = "$userRgVM.firstName $userRgVM.lastName";
+          dbUser.name = "$userRgVM.firstName $userRgVM.lastName";
           dbUser.email = myUser.email;
-          dbUser.firstName = userRgVM.firstName;
-          dbUser.lastName = userRgVM.lastName;
           dbUser.signedIn = DateTime.now().toUtc();
           dbUser.isActive = true;
           dbUser.metaData = "emailAndpassword";
+
+
+          var userProfile = new UserProfile();
+          userProfile.firstName = userRgVM.firstName;
+          userProfile.lastName = userRgVM.lastName;
+          dbUser.userProfile = userProfile;
+
           userFSDAL.addUser(dbUser);
 
           //add to userDevice
